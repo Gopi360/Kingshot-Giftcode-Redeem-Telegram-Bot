@@ -1,0 +1,32 @@
+[Unit]
+Description=KingShot Auto Gift Code Bot (Telegram)
+After=network.target
+Wants=network-online.target
+
+[Service]
+# ── Change 'ubuntu' to your Oracle VM username if different ──
+User=ubuntu
+WorkingDirectory=/home/ubuntu/kingshot-bot
+
+# ── Set your tokens here ──────────────────────────────────────
+# Option A: Put values directly here (simpler)
+Environment=TELEGRAM_BOT_TOKEN=PASTE_YOUR_BOT_TOKEN_HERE
+Environment=ADMIN_IDS=PASTE_YOUR_TELEGRAM_USER_ID_HERE
+Environment=CHECK_INTERVAL=30
+
+# ── Option B: Use a .env file instead ────────────────────────
+# Comment out the three lines above and uncomment this line:
+# EnvironmentFile=/home/ubuntu/kingshot-bot/.env
+
+ExecStart=/usr/bin/python3 /home/ubuntu/kingshot-bot/bot.py
+
+# Auto-restart on crash, wait 10s before retrying
+Restart=always
+RestartSec=10
+
+# Logging (view with: journalctl -u kingshot -f)
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target

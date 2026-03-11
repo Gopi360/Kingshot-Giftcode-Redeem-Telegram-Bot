@@ -1,0 +1,8 @@
+players.json
+seen_codes.json
+logs/
+screenshots/
+bot-token.txt
+__pycache__/
+.selenium_cache/
+.env
