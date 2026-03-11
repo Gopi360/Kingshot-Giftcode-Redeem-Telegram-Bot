@@ -9,7 +9,7 @@
 
 **New to this? Follow the complete step-by-step guide:**
 
-👉 **[ORACLE_DEPLOY_GUIDE.md](./ORACLE_DEPLOY_GUIDE.md)**
+👉 **[ORACLE-DEPLOY-GUIDE.md](./ORACLE-DEPLOY-GUIDE.md)**
 
 It covers everything: creating an Oracle account, launching a VM, uploading files, configuring tokens, setting up systemd, and troubleshooting.
 
@@ -107,7 +107,7 @@ sudo systemctl restart kingshot
 | `.env` | Your actual tokens (never commit this to GitHub) |
 | `kingshot.service` | systemd service for auto-start |
 | `setup_oracle.sh` | One-shot setup script for the VM |
-| `ORACLE_DEPLOY_GUIDE.md` | Full step-by-step deployment guide |
+| `ORACLE-DEPLOY-GUIDE.md` | Full step-by-step deployment guide |
 | `players.json` | Auto-created — stores registered player IDs |
 | `seen_codes.json` | Auto-created — tracks redeemed codes per player |
 | `logs/` | Daily log files |
